@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <link rel="stylesheet" href="video.css" media="screen" title="no title">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+</style>
+</head>
+<body>
+
+<video autoplay muted loop id="myVideo">
+  <source src="spacerocks.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+    
+    <!-- Navbar -->
+    <div class="navbar">
+      <div class="navbar-buttons">
+              <h1 style="font-family:cursive;color: #fff; font-size: 50px; ">Xplor</h1>
+
+        <button class="button" type="button" name="button">SIGN IN</button>
+          
+        <span><img style="position: relative; left: 1260px;" class="open-menu" src="menu.svg" alt=""/></span>
+          
+      </div>
+    </div>
+    
+    
+    
+    <!-- Overlay Navigation Menu -->
+    <div class="overlay">
+      <h2 class="nav-title">Navigation</h2>
+      <nav class="overlay-menu">
+        <ul>
+          <li><a href="#">Our Store</a></li>
+          <li><a href="#">Catalog</a></li>
+          <li><a href="#">Delivery</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><img class="close-menu" src="close.svg" alt=""/></li>
+        </ul>
+      </nav>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js" charset="utf-8"></script>
+    <script src="app.js" charset="utf-8"></script>
+
+<div class="content">
+  <button id="myBtn" onclick="myFunction()">Pause</button>
+</div>
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+
+</body>
+</html>
